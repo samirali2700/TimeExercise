@@ -16,6 +16,7 @@ body{
     border:1px solid #eee;
     padding:0 15px;
     height:auto;
+    box-shadow:1px 1px 0 rgba(0,0,0,0.2);
 }
 
 
@@ -26,10 +27,12 @@ nav{
     height:110px;
     display: flex;
     margin-top:50px;
+    box-shadow:1px 1px 0 rgba(0,0,0,0.2);
 }
 
 .side-title a{
     font-size: 48px;
+    
 }
 .side-title p {
     font-size:26px;
@@ -50,21 +53,29 @@ nav ul {
     font-size: 22px;
 }
 nav  > ul  > li > a{
-    padding:5px;
+   
     min-width:200px;
-    display: block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:1px 1px 0 rgba(0,0,0,0.2);
+    height:40px;
 }
 nav  > ul  > li > a:hover{
     border:1px solid #cecece;
 }
 nav > ul > li {
     border:1px solid #eee;
+    
 }
 
 .hero{
     border:1px solid #eee;
     padding:10px;
-    margin-top:15px;
+    margin:15px auto 0 auto;
     min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:1px 1px 0 rgba(0,0,0,0.2);
 }
