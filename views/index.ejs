@@ -5,8 +5,41 @@
         <%- include('./partials/nav.ejs') %>
        
         <div class="hero">
-            <h1>Home Page</h1>
+            <div class = "main-clock clock-frame">
+                <canvas id = "canvas" width = "600" height = "50" style="border:1px solid #cecece; box-shadow:1px 1px 0">
+                </canvas>    
+            </div>
         </div>
 
+        <script>
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        var p = { x: 25, y: 25 };
+        var velo = 2,
+            corner = 0,
+            rad = 20;
+        var ball = { x: p.x, y: p.y };
+        var moveX = Math.cos(Math.PI / 180 * corner) * velo;
+        //var moveY = Math.sin(Math.PI / 180 * corner) * velo;
+
+        function DrawMe() {
+            ctx.clearRect(0, 0, 600, 50);
+
+            if (ball.x > canvas.width - rad || ball.x < rad) moveX = -moveX;
+            //if (ball.y > canvas.height - rad || ball.y < rad) moveY = -moveY;
+
+            ball.x += moveX;
+            //ball.y += moveY;
+
+            ctx.beginPath();
+            ctx.fillStyle = 'red';
+            ctx.arc(ball.x, ball.y, rad, 0, Math.PI * 2, false);
+            ctx.fill();
+            ctx.closePath();
+        }
+        setInterval(DrawMe, 10);
+        
+        </script>
     </body>
 </html>
