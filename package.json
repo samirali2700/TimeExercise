@@ -1,4 +1,13 @@
 {
+
+
+  "name": "node-test",
+  "version": "1.0.0",
+  "description": "Node First Heroku Deployement",
+  "main": "app.js",
+  "scripts":{
+    "start":"node app.js"
+  },
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.2",
