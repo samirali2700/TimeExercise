@@ -73,9 +73,21 @@ nav > ul > li {
     border:1px solid #eee;
     padding:10px;
     margin:15px auto 0 auto;
-    min-height: 450px;
+    height:450;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     box-shadow:1px 1px 0 rgba(0,0,0,0.2);
+}
+.hero-top {
+    width:100%;
+    height:auto;
+    border:1px solid red;
+    padding:10px 20px;
+}
+#today{
+    font-size: 48px;
+}
+.hero-main{
+    border:1px solid red;
+    height:100px;
 }
