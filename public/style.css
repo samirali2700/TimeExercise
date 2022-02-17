@@ -13,17 +13,18 @@ li, a, h1, h2 {
 body{
     max-width: 90vw;
     margin:0 auto;
-    border:1px solid #eee;
     padding:0 15px;
-    height:auto;
-    box-shadow:1px 1px 0 rgba(0,0,0,0.2);
+    height:auto;    
+
+ 
 }
 
 
 /*  Head    */
 
 nav{
-    border:1px solid #eee;
+    background-color: #fff;
+    border:1px solid #cecece;
     display: flex;
     margin-top:50px;
     justify-content: space-between;
@@ -44,7 +45,7 @@ nav{
 
 }
 nav ul {
-
+    
     padding:10px;
     display: flex;
     align-items: flex-end;
@@ -63,8 +64,9 @@ nav  > ul  > li > a:hover{
 }
 
 .hero{
-    border:1px solid #eee;
-    padding:10px;
+    background-color: #fff;
+    border:1px solid #cecece;
+    padding:25px 10px;
     margin:15px auto 0 auto;
     height:450;
     display: flex;
