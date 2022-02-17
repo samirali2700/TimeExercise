@@ -42,7 +42,7 @@ app.get('/',(req,res) => {
 //const server = app.listen((process.env.PORT || '5000'));
 console.log("Calling app.listen().");
 
-var server = app.listen(('5000'), function (){
+var server = app.listen((process.env.PORT || '5000'), function (){
   console.log("Calling app.listen's callback function.");
   var host = server.address().address;
   var port = server.address().port;
@@ -50,4 +50,3 @@ var server = app.listen(('5000'), function (){
 });
 console.log(server.address());
 console.log("app.listen() executed.");
-//process.env.PORT ||
