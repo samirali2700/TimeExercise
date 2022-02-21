@@ -1,5 +1,6 @@
 const express = require('express');
 const fs = require('fs');
+const fetch = require("node-fetch");
 const app = express();
 
 
@@ -26,18 +27,38 @@ const months = ['January','February','March','April','May','June','July','August
 
 
 
+fetchWorldTime();
+
+async function fetchWorldTime(){
+  await fetch('https://www.timeapi.io/api/Time/current/zone?timeZone=Europe/Amsterdam') //"http://worldtimeapi.org/api/timezone"
+  .then(response => response.json())
+  .then(obj => {
+    copenhagenJson = obj;
+  });
+}
+var copenhagenJson;
+
+
+
+
 const dateObject = {
     today: days[date.getDay()],
     date: date.getDate(),
     month: months[date.getMonth()],
     year: date.getFullYear()
 }
-
+//<!--<%= today %>, <%= date %> <%= month %>  <%= new Date().getFullYear() %> -->
 //Route
 app.get('/',(req,res) => {
-    console.log();
-    res.render('index', dateObject);
+  let port = process.env.PORT;
+   
+
+    res.render('index',port);
 });
+app.get('/getTimeList', (req,res) => {
+    res.send(worldTimeList);
+})
+
 
 //const server = app.listen((process.env.PORT || '5000'));
 console.log("Calling app.listen().");

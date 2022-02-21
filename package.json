@@ -3,15 +3,17 @@
   "version": "1.0.0",
   "description": "Node First Heroku Deployement",
   "main": "app.js",
-  "scripts":{
-    "start":"node app.js"
+  "scripts": {
+    "start": "node app.js"
   },
   "dependencies": {
+    "curl": "^0.1.4",
     "ejs": "^3.1.6",
     "express": "^4.17.2",
     "https": "^1.0.0",
     "js": "^0.1.0",
     "node": "^17.4.0",
+    "node-fetch": "^2.6.7",
     "openssl": "^2.0.0"
   }
 }
