@@ -50,10 +50,12 @@ const dateObject = {
 //<!--<%= today %>, <%= date %> <%= month %>  <%= new Date().getFullYear() %> -->
 //Route
 app.get('/',(req,res) => {
-  let port = process.env.PORT;
+  let ports = {
+    port : process.env.PORT
+  };
    
 
-    res.render('index',port);
+    res.render('index',ports);
 });
 app.get('/getTimeList', (req,res) => {
     res.send(worldTimeList);
